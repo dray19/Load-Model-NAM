@@ -63,8 +63,7 @@ New_ML_data/*
 !New_ML_data/.gitkeep
 
 MTLf/**
-!DAWF/.gitkeep
-!DAWF/dawf_data/.gitkeep
+!MTLF/.gitkeep
 
 Move_files/*
 
