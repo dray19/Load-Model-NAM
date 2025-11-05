@@ -9,19 +9,19 @@ It includes multiple training pipelines, feature configurations, and production 
 
 ```
 ├── fcstout/                 # Forecast output storage
-├── model_1y_4m/             # Train on ~1 year, forecast 4 months
+├── model_1y_4m/             # Train on ~1 year,weighted 1 year
 │   ├── Create_ML.py         # Training script
 │   ├── ML_model.py          # Model architecture
 │   ├── run.sh               # Run training job
 │   ├── col_order/           # Column ordering for training
 │   ├── selected_cols/       # Feature lists (cols_all.json)
 │   └── utils.py
-├── model_4y_1y/             # Train ~4 years, forecast ~1 year
-├── model_4y_lin_bias/       # Linear bias-adjusted model variant
-├── model_5y_1y/             # Train ~5 years, forecast 1 year
-├── model_5y_lin_bias/       # Linear bias-adjusted model
-├── model_6m_2w_dc_bias/     # 6-month model, bias-corrected
-├── model_6m_dc_bias/        # 6-month bias-corrected model
+├── model_4y_1y/             # Train ~4 years
+├── model_4y_lin_bias/       # Train ~4 years, Linear weighted 
+├── model_5y_1y/             # Train ~5 years, weighted 1 year
+├── model_5y_lin_bias/       # Train ~5 years, Linear weighted
+├── model_6m_2w_dc_bias/     # 6-month model, weighted 2 weeks
+├── model_6m_dc_bias/        # 6-month
 │   └── (all follow same pattern as above)
 │
 ├── MTLF/                    # Mid-Term Load Forecast data tools
@@ -30,8 +30,8 @@ It includes multiple training pipelines, feature configurations, and production 
 │   ├── send_mtlf.py
 │   └── utils.py
 │
-├── New_ML_data/             # Intermediate datasets
-├── pro_data/                # Processed datasets
+├── New_ML_data/             # Training and Testing datasets
+├── pro_data/                # Forecast data for live predictions
 │
 ├── Production/              # Forecast production pipeline
 │   ├── config.ini           # Model & path configuration
