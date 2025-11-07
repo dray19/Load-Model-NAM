@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Refactored and cleaned version of the original Model_pred class.
 
